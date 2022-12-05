@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="bg-dark vh-100">
-        <h3 class="text-white mb-4">Party Result input for Test polling unit, with id of 999</h3>
+        <h3 class="text-white mb-4 mt-4 ms-4">Party Result input for Test polling unit, with id of 999</h3>
+        <h4 class="text-warning mb-4 mb-4 ms-4 ">I have created a Test polling unit, with id of 999 so the results of the parties here will be linked to it</h4>
 
-
-        <form id="form" action="javascript:alert( 'success!' );">
+        <form id="form" action="javascript:alert( 'request sent!' );" class="m-5">
             <div class="mb-3">
                 <label for="LGA" class="form-label text-white">Select Party</label>
                 <select class="form-select mb-3" aria-label=".form-select-lg example" id="party" name="party" required>

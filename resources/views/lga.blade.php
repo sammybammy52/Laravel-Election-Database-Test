@@ -1,10 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="bg-dark vh-100">
+    <div class="bg-dark vh-100 d-flex justify-content-center">
 
             <div class="mb-3 col-6">
-                <label for="LGA" class="form-label text-white">Select Delta LGAs</label>
+                <label for="LGA" class="form-label text-warning mt-4">Only delta State has LGAs, state_id of 25 </label>
+                <label for="LGA" class="form-label text-warning mb-4">Not all LGAs have pu results, please check multiple LGAs e.g Ukwuani, Ughelli North, Ethiope West </label>
                 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="lga">
                     <option selected>Select Delta LGAs</option>
 
@@ -31,7 +32,7 @@
                         console.log(data);
 
                         if (data.length < 1) {
-                            $("#total").html(`<span class="text-white"> No Results </span>`);
+                            $("#total").html(`<h3 class="text-danger"> No Results Found 🧐</h3>`);
                         }
                         else{
                             let total = 0;
@@ -43,7 +44,7 @@
                                 total = total + intval;
                             }
 
-                            $("#total").html(`<span class="text-white">Total: ${total} </span>`);
+                            $("#total").html(`<h3 class="text-success">Total: ${total} 🤓 </h3>`);
 
                         }
                     });

@@ -14,9 +14,11 @@ use App\Http\Controllers\ElectionController;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
-
-Route::get('/', [ElectionController::class, 'showPollingUnitResults']);
+Route::get('/q1', [ElectionController::class, 'showPollingUnitResults']);
 Route::get('/q2', [ElectionController::class, 'showLgaResultsView']);
 Route::get('/q2/{lga_id}', [ElectionController::class, 'showLgaResults']);
 Route::post('/q3', [ElectionController::class, 'insertResults']);
